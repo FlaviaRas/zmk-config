@@ -191,15 +191,15 @@
         raise_layer {
             // -----------------------------------------------------------------------------------------
             // | N/A | LWR |     |  ⬆  |     |     |      |  V+ |  V- |  Vx |PSCN | RSE | N/A |
-            // | N/A |     |  ⬅ |  ⬇  |  ⮕ |     |      |     |     |     |  B+ |  B- | N/A |
+            // | N/A |     |  ⬅ |  ⬇  |  ⮕ |     |      | sc⬇ | sc⬆ |     |  B+ |  B- | N/A |
             // | N/A |     |     |     |     |     |      |     |     |     |     | WIN | N/A |
             //                   | ENT | .(') |SPACE |  |BK(DE)| ,(") |  ⬆  |
 
             bindings = <
-&trans         &trans          &trans         &kp UP          &trans         &trans                    &kp C_VOL_UP   &kp C_VOL_DN    &kp C_MUTE     &kp PSCRN       &trans         &trans
-&trans         &trans          &kp LEFT       &kp DOWN        &kp RIGHT      &trans                    &trans         &trans          &trans         &kp C_BRI_UP    &kp C_BRI_DN   &trans
-&trans         &trans          &trans         &trans          &trans         &trans                    &trans         &trans          &trans         &kp C_SLEEP     &kp RWIN       &trans
-&none          &none           &none          &none           &none          &none                     &none          &none           &none          &none           &none          &none 
+&trans         &trans          &trans         &kp UP          &trans         &trans                    &kp C_VOL_UP         &kp C_VOL_DN       &kp C_MUTE     &kp PSCRN       &trans         &trans
+&trans         &trans          &kp LEFT       &kp DOWN        &kp RIGHT      &trans                    &kp C_AC_SCROLL_DOWN &kp C_AC_SCROLL_UP &kp C_BRI_UP   &kp C_BRI_DN    &kp RWIN       &trans
+&trans         &trans          &trans         &trans          &trans         &trans                    &kp C_AC_ZOOM_IN     &kp C_AC_ZOOM_OUT  &trans          &trans         &kp C_SLEEP     &kp RWIN       &trans
+&none          &none           &none          &none           &none          &none                     &none                &none           &none          &none           &none          &none 
                                                   &trans         &trans          &trans          &trans         &trans          &trans  
             >;   
         };
