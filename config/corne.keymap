@@ -166,10 +166,10 @@
             //                    | ENT |  ⬆  | __(↵)|  |BK(DE)| .(') | ,(") |
 
             bindings = <
-&none  &tog 2  &backs  &kp P  &kp Y  &kp F                    &kp G   &kp C    &kp R    &kp L  &tog 1  &none
-&none  &kp A   &kp O   &kp E      &kp U     &kp I                    &kp D   &kp H    &kp T    &kp N  &kp S   &none
-&none  &coppy  &qur    &kp J      &kp K     &kp X                    &kp B   &kp M    &kp W    &kp V  &kp Z   &none
-                     &kp LCTRL &mt SINGLE_QUOTE DOT &kp SPACE      &kp LSHIFT  &mt AT COMMA  &kp RET 
+&none   &tog 2  &backs  &kp P   &kp Y   &kp F           &kp G   &kp C   &kp R   &kp L   &tog 1  &none
+&none   &kp A   &kp O   &kp E   &kp U   &kp I           &kp D   &kp H   &kp T   &kp N   &kp S   &none
+&none   &coppy  &qur    &kp J   &kp K   &kp X           &kp B   &kp M   &kp W   &kp V   &kp Z   &none
+      &kp LCTRL  &mt SINGLE_QUOTE DOT  &kp SPACE      &kp LSHIFT  &mt AT COMMA  &kp RET 
             >;
         };
 
@@ -181,26 +181,27 @@
             //                   | ENT | .(') |SPACE |  |BK(DE)| ,(") |  ⬆  |
 
             bindings = <
-&trans  &trans  &trans   &fancyl        &atmps          &exchsh                &kp N1  &kp N2                         &kp N3  &equlpls    &trans  &trans
-&trans  &slash  &croc    &money     &mt SEMI COLON  &qusthat               &kp N4  &kp N5                         &kp N6  &prcntastk  &trans   &trans
-&trans  &trans  &lines   &mt RBRC LBRC  &mt RBKT LBKT   &mt RPAR LPAR          &kp N7  &kp N8                         &kp N9  &trans      &trans &trans
-                                          &trans    &trans     &trans      &trans  &mt COMMA N0  &trans
-            >;
+&trans         &trans          &trans         &fancyl         &atmps         &exchsh                   &kp N1         &kp N2          &kp N3         &equlpls        &trans         &trans
+&trans         &slash          &croc          &money          &mt SEMI COLON &qusthat                  &kp N4         &kp N5          &kp N6         &prcntastk      &trans         &trans
+&trans         &trans          &lines         &mt RBRC LBRC   &mt RBKT LBKT  &mt RPAR LPAR             &kp N7         &kp N8          &kp N9         &trans &trans   &trans         &trans
+                                                  &trans         &trans          &trans          &trans         &mt COMMA N0    &trans
+            >;   
         };
 
         raise_layer {
             // -----------------------------------------------------------------------------------------
             // | N/A | LWR |     |  ⬆  |     |     |      |  V+ |  V- |  Vx |PSCN | RSE | N/A |
-            // | N/A |     |  ⬅ |  ⬇  |  ⮕ |     |      | home |     |    |  B+ |  B- | N/A |
-            // | N/A |     |     |     |     |     |      |     |     |     |     |     | N/A |
+            // | N/A |     |  ⬅ |  ⬇  |  ⮕ |     |      |     |     |     |  B+ |  B- | N/A |
+            // | N/A |     |     |     |     |     |      |     |     |     |     | WIN | N/A |
             //                   | ENT | .(') |SPACE |  |BK(DE)| ,(") |  ⬆  |
 
             bindings = <
-&trans  &trans  &trans    &kp UP    &trans     &trans    &kp C_VOL_UP  &kp C_VOL_DN  &kp C_MUTE  &kp PSCRN     &trans        &trans
-&trans  &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans    &kp RWIN      &trans        &trans      &kp C_BRI_UP  &kp C_BRI_DN  &trans
-&trans  &trans  &trans    &trans    &trans     &trans    &trans        &trans        &trans      &kp C_SLEEP       &trans        &trans
-                          &trans    &trans     &trans    &trans        &trans &trans  
-            >;
+&trans         &trans          &trans         &kp UP          &trans         &trans                    &kp C_VOL_UP   &kp C_VOL_DN    &kp C_MUTE     &kp PSCRN       &trans         &trans
+&trans         &trans          &kp LEFT       &kp DOWN        &kp RIGHT      &trans                    &trans         &trans          &trans         &kp C_BRI_UP    &kp C_BRI_DN   &trans
+&trans         &trans          &trans         &trans          &trans         &trans                    &trans         &trans          &trans         &kp C_SLEEP     &kp RWIN       &trans
+&none          &none           &none          &none           &none          &none                     &none          &none           &none          &none           &none          &none 
+                                                  &trans         &trans          &trans          &trans         &trans          &trans  
+            >;   
         };
     };
 };
