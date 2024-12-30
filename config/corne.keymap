@@ -198,8 +198,7 @@
             bindings = <
 &trans         &trans          &trans         &kp UP          &trans         &trans                    &kp C_VOL_UP         &kp C_VOL_DN       &kp C_MUTE     &kp PSCRN       &trans         &trans
 &trans         &trans          &kp LEFT       &kp DOWN        &kp RIGHT      &trans                    &kp C_AC_SCROLL_DOWN &kp C_AC_SCROLL_UP &kp C_BRI_UP   &kp C_BRI_DN    &kp RWIN       &trans
-&trans         &trans          &trans         &trans          &trans         &trans                    &kp C_AC_ZOOM_IN     &kp C_AC_ZOOM_OUT  &trans          &trans         &kp C_SLEEP    &trans
-&none          &none           &none          &none           &none          &none                     &none                &none           &none          &none           &none          &none 
+&trans         &trans          &trans         &trans          &trans         &trans                    &kp C_AC_ZOOM_IN     &kp C_AC_ZOOM_OUT  &bt BT_SEL 1   &bt BT_SEL 2    &kp C_SLEEP    &trans
                                                   &trans         &trans          &trans          &trans         &trans          &trans  
             >;   
         };
