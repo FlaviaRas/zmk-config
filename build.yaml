@@ -17,8 +17,21 @@
 #     artifact-name: corne_left_with_logging
 #
 ---
-include:
-  - board: nice_nano_v2
-    shield: corne_left
-  - board: nice_nano_v2
-    shield: settings_reset
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        board: ["nice_nano_v2"]
+        shield: ["corne_left", "corne_right", "settings_reset"]
+
+    steps:
+      - uses: ./.github/workflows/common_steps.yml # Include the reusable workflow
+
+      - name: Build
+        uses: zmk/zmk-build-action@v1
+        with:
+          board: ${{ matrix.board }}
+          shield: ${{ matrix.shield }}
+          cmake-args: ${{ matrix.cmake-args }}
+          artifact-name: ${{ matrix.artifact-name }}
