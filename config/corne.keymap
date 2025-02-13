@@ -197,9 +197,9 @@
             //                   | ENT | .(') |SPACE |  |BK(DE)| ,(") |  ⬆  |
 
             bindings = <
-&trans         &trans          &trans         &kp UP          &trans         &trans                    &kp C_BRI_UP     &kp C_BRI_DN     &msc SCRL_UP     &bt BT_SEL 1     &bt BT_SEL 2     &trans
+&trans         &trans          &trans         &kp UP          &trans         &trans                    &kp C_BRI_UP     &kp C_BRI_DN     &msc SCRL_UP     &kp PSCRN        &trans           &trans
 &trans         &trans          &kp LEFT       &kp DOWN        &kp RIGHT      &trans                    &kp PSCRN        &msc SCRL_LEFT   &msc SCRL_DOWN   &msc SCRL_RIGHT  &kp RWIN         &trans
-&trans         &trans          &trans         &trans          &trans         &trans                    &kp C_VOL_UP     &kp C_VOL_DN     &kp C_MUTE       &trans           &trans           &trans
+&trans         &trans          &trans         &trans          &trans         &trans                    &kp C_VOL_UP     &kp C_VOL_DN     &kp C_MUTE       &bt BT_SEL 1     &bt BT_SEL 2     &trans
                                                   &trans         &trans          &trans          &trans         &trans          &trans 
             >;   
         };
