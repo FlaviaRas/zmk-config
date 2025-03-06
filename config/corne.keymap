@@ -65,6 +65,7 @@
             bindings = <&kp PRCNT>, <&kp ASTRK>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
 1: 1_F1 {
     compatible = "zmk,behavior-mod-morph";
     bindings = <&kp KP_N1>, <&kp F1>;
