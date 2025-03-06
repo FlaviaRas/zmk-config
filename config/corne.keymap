@@ -35,12 +35,14 @@ uppies: shift_caps {
 
 coppy: tap_dance_copy_paste {
     compatible = "zmk,behavior-tap-dance";
+    #binding-cells = <0>;
     tapping-term-ms = <200>;
     bindings = <&kp LC(C)>, <&kp LC(V)>;
 };
 
 qur: tap_dance_q_undo_redo {
     compatible = "zmk,behavior-tap-dance";
+    #binding-cells = <0>;
     tapping-term-ms = <200>;
     bindings = <&kp Q>, <&kp LC(Z)>, <&kp LC(Y)>;
 };
