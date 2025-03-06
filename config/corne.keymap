@@ -12,162 +12,159 @@
 
 / {
     behaviors {
-        
 backs: back_del {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp BKSP>, <&kp DEL>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
+    compatible = "zmk,behavior-mod-morph";
+    #binding-cells = <0>;
+    bindings = <&kp BKSP>, <&kp DEL>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
 };
 
 esctb: esc_tab {
-            compatible = "zmk,behavior-mod-morph";
-#binding-cells = <0>;
-            bindings = <&kp TAB>, <&kp ESC>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
+    compatible = "zmk,behavior-mod-morph";
+    #binding-cells = <0>;
+    bindings = <&kp TAB>, <&kp ESC>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
 };
 
 uppies: shift_caps {
-            compatible = "zmk,behavior-mod-morph";
-#binding-cells = <0>;
-            bindings = <&kp LSHFT>, <&kp CAPS>;
-            mods = <(MOD_LCTL)>;
+    compatible = "zmk,behavior-mod-morph";
+    #binding-cells = <0>;
+    bindings = <&kp LSHFT>, <&kp CAPS>;
+    mods = <(MOD_LCTL)>;
 };
 
 coppy: tap_dance_copy_paste {
-            compatible = "zmk,behavior-tap-dance";
-            tapping-term-ms = <200>;
-            bindings = <&kp LC(C)>, <&kp LC(V)>;
+    compatible = "zmk,behavior-tap-dance";
+    tapping-term-ms = <200>;
+    bindings = <&kp LC(C)>, <&kp LC(V)>;
 };
 
 qur: tap_dance_q_undo_redo {
-            compatible = "zmk,behavior-tap-dance";
-            tapping-term-ms = <200>;
-            bindings = <&kp Q>, <&kp LC(Z)>, <&kp LC(Y)>;
+    compatible = "zmk,behavior-tap-dance";
+    tapping-term-ms = <200>;
+    bindings = <&kp Q>, <&kp LC(Z)>, <&kp LC(Y)>;
 };
 
 equlpls: equal_plus {
-            compatible = "zmk,behavior-mod-morph";
-#binding-cells = <0>;
-            bindings = <&kp EQUAL>, <&kp PLUS>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
+    compatible = "zmk,behavior-mod-morph";
+    #binding-cells = <0>;
+    bindings = <&kp EQUAL>, <&kp PLUS>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
 };
 
 prcntastk: percent_asterisk {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp PRCNT>, <&kp ASTRK>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
+    compatible = "zmk,behavior-mod-morph";
+    #binding-cells = <0>;
+    bindings = <&kp PRCNT>, <&kp ASTRK>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
 };
 
 one: 1_F1 {
     compatible = "zmk,behavior-mod-morph";
-#binding-cells = <0>;
+    #binding-cells = <0>;
     bindings = <&kp KP_N1>, <&kp F1>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
 };
 
 two: 2_F2 {
     compatible = "zmk,behavior-mod-morph";
-#binding-cells = <0>;
+    #binding-cells = <0>;
     bindings = <&kp KP_N2>, <&kp F2>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
 };
 
 three: 3_F3 {
     compatible = "zmk,behavior-mod-morph";
-#binding-cells = <0>;
+    #binding-cells = <0>;
     bindings = <&kp KP_N3>, <&kp F3>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
 };
 
 four: 4_F4 {
     compatible = "zmk,behavior-mod-morph";
-#binding-cells = <0>;
+    #binding-cells = <0>;
     bindings = <&kp KP_N4>, <&kp F4>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
 };
 
 five: 5_F5 {
     compatible = "zmk,behavior-mod-morph";
-#binding-cells = <0>;
+    #binding-cells = <0>;
     bindings = <&kp KP_N5>, <&kp F5>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
 };
 
 six: 6_F6 {
     compatible = "zmk,behavior-mod-morph";
-#binding-cells = <0>;
+    #binding-cells = <0>;
     bindings = <&kp KP_N6>, <&kp F6>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
 };
 
 seven: 7_F7 {
     compatible = "zmk,behavior-mod-morph";
-#binding-cells = <0>;
+    #binding-cells = <0>;
     bindings = <&kp KP_N7>, <&kp F7>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
 };
 
 eight: 8_F8 {
     compatible = "zmk,behavior-mod-morph";
-#binding-cells = <0>;
+    #binding-cells = <0>;
     bindings = <&kp KP_N8>, <&kp F8>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
 };
 
 nine: 9_F9 {
     compatible = "zmk,behavior-mod-morph";
-#binding-cells = <0>;
+    #binding-cells = <0>;
     bindings = <&kp KP_N9>, <&kp F9>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
 };
 
 zero: 0_F10 {
     compatible = "zmk,behavior-mod-morph";
-#binding-cells = <0>;
+    #binding-cells = <0>;
     bindings = <&mt COMMA KP_N0>, <&kp F10>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
 };
 
 vols: mod_morph_volup_voldwn_mute {
-     compatible = "zmk,behavior-mod-morph";
-#binding-cells = <0>;
-     bindings = <&kp C_VOL_UP>,  <&kp C_VOL_DN>, <&kp C_MUTE>;  
-     mods = <(MOD_LSFT|MOD_RSFT)>, <(MOD_LCTL|MOD_RCTL)>;
+    compatible = "zmk,behavior-mod-morph";
+    #binding-cells = <0>;
+    bindings = <&kp C_VOL_UP>, <&kp C_VOL_DN>, <&kp C_MUTE>;
+    mods = <(MOD_LSFT|MOD_RSFT)>, <(MOD_LCTL|MOD_RCTL)>;
 };
 
 btmorph: mod_morph_bt1_bt2_btclr {
-            compatible = "zmk,behavior-mod-morph";
-#binding-cells = <0>;
-            bindings = <&bt BT_SEL 1>,  <&bt BT_SEL 2>, <&bt BT_CLR_ALL>;  
-            mods = <(MOD_LSFT|MOD_RSFT)>, <(MOD_LCTL|MOD_RCTL)>;
+    compatible = "zmk,behavior-mod-morph";
+    #binding-cells = <0>;
+    bindings = <&bt BT_SEL 1>, <&bt BT_SEL 2>, <&bt BT_CLR_ALL>;
+    mods = <(MOD_LSFT|MOD_RSFT)>, <(MOD_LCTL|MOD_RCTL)>;
 };
 
 bri: brightup_brightdwn {
-            compatible = "zmk,behavior-mod-morph";
-#binding-cells = <0>;
-            bindings = <&kp C_BRI_DN>, <&kp C_BRI_UP>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
+    compatible = "zmk,behavior-mod-morph";
+    #binding-cells = <0>;
+    bindings = <&kp C_BRI_DN>, <&kp C_BRI_UP>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
 };
 
 num_word: num_word {
-        #binding-cells = <0>;
-        compatible = "zmk,behavior-num-word";
-        continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL LPAR RPAR>;
-        ignore-numbers;
+    #binding-cells = <0>;
+    compatible = "zmk,behavior-num-word";
+    continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL LPAR RPAR>;
+    ignore-numbers;
 };
 
 nummies: new_num_word {
-        #binding-cells = <0>;
-        compatible = "zmk,behavior-num-word";
-        layers = <(1)>;
-        continue-list = <BSPC EQUAL>;
-        ignore-numbers;
-
-    };
-
-    };
+    #binding-cells = <0>;
+    compatible = "zmk,behavior-num-word";
+    layers = <(1)>;
+    continue-list = <BSPC EQUAL>;
+    ignore-numbers;
+};
+};
 
     keymap {
         compatible = "zmk,keymap";
