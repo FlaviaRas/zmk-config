@@ -17,3 +17,4 @@ manifest:
   self:
     path: config
    
+west build -t clean
