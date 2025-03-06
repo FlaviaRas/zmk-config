@@ -13,58 +13,49 @@
 / {
     behaviors {
         
-
-        backs: back_del {
+backs: back_del {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp BKSP>, <&kp DEL>;
-
             mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
+};
 
-        esctb: esc_tab {
+esctb: esc_tab {
             compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
             bindings = <&kp TAB>, <&kp ESC>;
-
             mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
+};
 
-        uppies: shift_caps {
+uppies: shift_caps {
             compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
             bindings = <&kp LSHFT>, <&kp CAPS>;
-
             mods = <(MOD_LCTL)>;
-        };
+};
 
-        coppy: tap_dance_copy_paste {
+coppy: tap_dance_copy_paste {
             compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp LC(C)>, <&kp LC(V)>;
-        };
+};
 
-        qur: tap_dance_q_undo_redo {
+qur: tap_dance_q_undo_redo {
             compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp Q>, <&kp LC(Z)>, <&kp LC(Y)>;
-        };
+};
 
-        equlpls: equal_plus {
+equlpls: equal_plus {
             compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
             bindings = <&kp EQUAL>, <&kp PLUS>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
+};
 
-        prcntastk: percent_asterisk {
+prcntastk: percent_asterisk {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp PRCNT>, <&kp ASTRK>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
+};
 
 one: 1_F1 {
     compatible = "zmk,behavior-mod-morph";
@@ -126,32 +117,32 @@ zero: 0_F10 {
     mods = <(MOD_LSFT|MOD_RSFT)>;
 };
 
-        vols: mod_morph_volup_voldwn_mute {
-            compatible = "zmk,behavior-mod-morph";
-            bindings = <&kp C_VOL_UP>,  <&kp C_VOL_DN>, <&kp C_MUTE>;  
-            mods = <(MOD_LSFT|MOD_RSFT)>, <(MOD_LCTL|MOD_RCTL)>;
-        };
+vols: mod_morph_volup_voldwn_mute {
+     compatible = "zmk,behavior-mod-morph";
+     bindings = <&kp C_VOL_UP>,  <&kp C_VOL_DN>, <&kp C_MUTE>;  
+     mods = <(MOD_LSFT|MOD_RSFT)>, <(MOD_LCTL|MOD_RCTL)>;
+};
 
-         btmorph: mod_morph_bt1_bt2_btclr {
+btmorph: mod_morph_bt1_bt2_btclr {
             compatible = "zmk,behavior-mod-morph";
             bindings = <&bt BT_SEL 1>,  <&bt BT_SEL 2>, <&bt BT_CLR_ALL>;  
             mods = <(MOD_LSFT|MOD_RSFT)>, <(MOD_LCTL|MOD_RCTL)>;
-        };
+};
 
-           bri: brightup_brightdwn {
+bri: brightup_brightdwn {
             compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
             bindings = <&kp C_BRI_DN>, <&kp C_BRI_UP>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
+};
 
-      num_word: num_word {
+num_word: num_word {
         #binding-cells = <0>;
         compatible = "zmk,behavior-num-word";
         continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL LPAR RPAR>;
         ignore-numbers;
-  };
-      nummies: new_num_word {
+};
+
+nummies: new_num_word {
         #binding-cells = <0>;
         compatible = "zmk,behavior-num-word";
         layers = <(1)>;
