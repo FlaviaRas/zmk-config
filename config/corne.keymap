@@ -66,61 +66,61 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-1: 1_F1 {
+one: 1_F1 {
     compatible = "zmk,behavior-mod-morph";
     bindings = <&kp KP_N1>, <&kp F1>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
 };
 
-2: 2_F2 {
+two: 2_F2 {
     compatible = "zmk,behavior-mod-morph";
     bindings = <&kp KP_N2>, <&kp F2>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
 };
 
-3: 3_F3 {
+three: 3_F3 {
     compatible = "zmk,behavior-mod-morph";
     bindings = <&kp KP_N3>, <&kp F3>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
 };
 
-4: 4_F4 {
+four: 4_F4 {
     compatible = "zmk,behavior-mod-morph";
     bindings = <&kp KP_N4>, <&kp F4>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
 };
 
-5: 5_F5 {
+five: 5_F5 {
     compatible = "zmk,behavior-mod-morph";
     bindings = <&kp KP_N5>, <&kp F5>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
 };
 
-6: 6_F6 {
+six: 6_F6 {
     compatible = "zmk,behavior-mod-morph";
     bindings = <&kp KP_N6>, <&kp F6>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
 };
 
-7: 7_F7 {
+seven: 7_F7 {
     compatible = "zmk,behavior-mod-morph";
     bindings = <&kp KP_N7>, <&kp F7>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
 };
 
-8: 8_F8 {
+eight: 8_F8 {
     compatible = "zmk,behavior-mod-morph";
     bindings = <&kp KP_N8>, <&kp F8>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
 };
 
-9: 9_F9 {
+nine: 9_F9 {
     compatible = "zmk,behavior-mod-morph";
     bindings = <&kp KP_N9>, <&kp F9>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
 };
 
-10: 0_F10 {
+zero: 0_F10 {
     compatible = "zmk,behavior-mod-morph";
     bindings = <&mt COMMA KP_N0>, <&kp F10>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -188,10 +188,10 @@
             //                    | CTRL | .(') | __ |  |  ⬆  | 0(,) |  ↵  |
 
             bindings = <
-&trans       &trans          &trans          &mt PIPE MINUS   &mt AMPS DQT   &mt BSLH EXCL             &1         &2          &3         &equlpls        &trans         &trans
-&trans  &mt NON_US_BACKSLASH FSLH &mt GT LT  &mt DOLLAR POUND &mt SEMI COLON &mt CARET QMARK           &4         &5          &6         &prcntastk      &esctb         &trans
-&trans       &trans          &mt PIPE2 UNDER &mt RBRC LBRC    &mt RBKT LBKT  &mt RPAR LPAR             &7         &8          &9         &trans          &trans         &trans
-                                                  &trans         &trans          &trans              &trans       &0       &trans
+&trans       &trans          &trans          &mt PIPE MINUS   &mt AMPS DQT   &mt BSLH EXCL             &one       &two       &three      &equlpls        &trans         &trans
+&trans  &mt NON_US_BACKSLASH FSLH &mt GT LT  &mt DOLLAR POUND &mt SEMI COLON &mt CARET QMARK           &four      &five      &six        &prcntastk      &esctb         &trans
+&trans       &trans          &mt PIPE2 UNDER &mt RBRC LBRC    &mt RBKT LBKT  &mt RPAR LPAR             &seven     &eight     &nine       &trans          &trans         &trans
+                                                  &trans         &trans          &trans              &trans       &zero      &trans
             >;   
         };
 
