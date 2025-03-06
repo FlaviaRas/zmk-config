@@ -135,7 +135,7 @@ vols: mod_morph_volup_voldwn_mute {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&kp C_VOL_UP>, <&kp C_VOL_DN>, <&kp C_MUTE>;
-    mods = <(MOD_LSFT | MOD_RSFT)>, <(MOD_LCTL | MOD_RCTL)>;
+    mods = <(MOD_LSFT|MOD_RSFT)>, <(MOD_LCTL|MOD_RCTL)>;
 };
 
 btmorph: mod_morph_bt1_bt2_btclr {
