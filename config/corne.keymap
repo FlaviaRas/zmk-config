@@ -52,18 +52,39 @@
             bindings = <&kp Q>, <&kp LC(Z)>, <&kp LC(Y)>;
         };
 
-          vols: mod_morph_volup_voldown_mute {
+        equlpls: equal_plus {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp EQUAL>, <&kp PLUS>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        prcntastk: percent_asterisk {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp PRCNT>, <&kp ASTRK>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        vols: mod_morph_volup_voldwn_mute {
             compatible = "zmk,behavior-mod-morph";
             bindings = <&kp C_VOL_UP>,  <&kp C_VOL_DN>, <&kp C_MUTE>;  
             mods = <(MOD_LSFT|MOD_RSFT)>, <(MOD_LCTL|MOD_RCTL)>;
         };
 
-        qur: tap_dance_q_undo_redo {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp Q>, <&kp LC(Z)>, <&kp LC(Y)>;
+         bt: mod_morph_bt1_bt2_btclr {
+            compatible = "zmk,behavior-mod-morph";
+            bindings = <&bt BT_SEL 1>,  <&bt BT_SEL 2>, <&bt BT_CLR_ALL>;  
+            mods = <(MOD_LSFT|MOD_RSFT)>, <(MOD_LCTL|MOD_RCTL)>;
         };
+
+           bri: brightup_brightdwn {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp C_BRI_DN>, <&kp C_BRI_UP>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
       num_word: num_word {
         #binding-cells = <0>;
         compatible = "zmk,behavior-num-word";
@@ -122,11 +143,11 @@
             //                    | CTRL | .(') | __ |  |  ⬆  | ,(") |  ↵  |
 
             bindings = <
-&trans         &trans          &trans         &kp UP          &trans         &trans                    &kp C_VOL_UP     &kp C_BRI_DN     &msc SCRL_UP     &kp PSCRN        &trans           &trans
-&trans         &trans          &kp LEFT       &kp DOWN        &kp RIGHT      &trans                    &kp C_VOL_DN     &msc SCRL_LEFT   &msc SCRL_DOWN   &msc SCRL_RIGHT  &kp RWIN         &trans
-&trans         &trans          &trans         &trans          &trans         &trans                    &kp C_MUTE       &kp C_VOL_DN     &kp C_MUTE       &bt BT_SEL 1     &bt BT_SEL 2     &trans
+&trans         &trans          &trans         &kp UP          &trans         &trans                    &vols          &bri            &msc SCRL_UP     &kp PSCRN        &trans           &trans
+&trans         &trans          &kp LEFT       &kp DOWN        &kp RIGHT      &trans                    &trans         &msc SCRL_LEFT  &msc SCRL_DOWN   &msc SCRL_RIGHT  &kp RWIN         &trans
+&trans         &trans          &trans         &trans          &trans         &trans                    &bt            &trans          &trans           &trans           &trans           &trans
                                                   &trans         &trans          &trans          &trans         &trans          &trans 
             >;   
-        };&bt BT_CLR_ALL   C_BRI_UP &kp C_BRI_DN
+        };
     };
 };
