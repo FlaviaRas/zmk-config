@@ -14,62 +14,6 @@
     behaviors {
         
 
-        croc: croc {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp LT>, <&kp GT>;
-
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        slash: slash {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp FSLH>, <&kp NON_US_BACKSLASH>;
-
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        lines: underscore_pipe {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp UNDER>, <&kp PIPE2>;
-
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        fancyl: minus_tilde {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp MINUS>, <&kp PIPE>;
-
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        equlpls: equal_plus {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp EQUAL>, <&kp PLUS>;
-
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        prcntastk: percent_asterisk {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp PRCNT>, <&kp ASTRK>;
-
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        qusthat: question_caret {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp QMARK>, <&kp CARET>;
-
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
         backs: back_del {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -94,30 +38,6 @@
             mods = <(MOD_LCTL)>;
         };
 
-        money: pound_dollar {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp POUND>, <&kp DOLLAR>;
-
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        atmps: at_amps {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp DQT>, <&kp AMPS>;
-
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        exchsh: exclamation_hash {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp EXCL>, <&kp BSLH>;
-
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
         coppy: tap_dance_copy_paste {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
@@ -132,13 +52,18 @@
             bindings = <&kp Q>, <&kp LC(Z)>, <&kp LC(Y)>;
         };
 
-         innie: tap_dance_space_enter {
+          vols: mod_morph_volup_voldown_mute {
+            compatible = "zmk,behavior-mod-morph";
+            bindings = <&kp C_VOL_UP>,  <&kp C_VOL_DN>, <&kp C_MUTE>;  
+            mods = <(MOD_LSFT|MOD_RSFT)>, <(MOD_LCTL|MOD_RCTL)>;
+        };
+
+        qur: tap_dance_q_undo_redo {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp SPACE>, <&kp RET>;
+            bindings = <&kp Q>, <&kp LC(Z)>, <&kp LC(Y)>;
         };
-      
       num_word: num_word {
         #binding-cells = <0>;
         compatible = "zmk,behavior-num-word";
@@ -161,10 +86,10 @@
 
         default_layer {
             // -----------------------------------------------------------------------------------------
-            // | N/A | LWR |esctb|  P  |  Y  |  F  |      |  G  |  C  |  R  |  L  | RSE | N/A |
+            // | N/A | LWR | ⌫ |  P  |  Y  |  F  |      |  G  |  C  |  R  |  L  | RSE | N/A |
             // | N/A |  A  |  O  |  E  |  U  |  I  |      |  D  |  H  |  T  |  N  |  S  | N/A |
             // | N/A |coppy|  Q  |  J  |  K  |  X  |      |  B  |  M  |  W  |  V  |  Z  | N/A |
-            //                    | ENT |  ⬆  | __(↵)|  |BK(DE)| .(') | ,(") |
+            //                    | CTRL | .(') | __ |  |  ⬆  | ,(") |  ↵  |
 
             bindings = <
 &none   &tog 2  &backs  &kp P   &kp Y   &kp F           &kp G   &kp C   &kp R   &kp L   &tog 1  &none
@@ -176,32 +101,32 @@
 
         lower_layer {
             // ---------------------https://github.com/FlaviaRas/zmk-configold/issues--------------------------------------------------------------------
-            // | N/A | LWR | £($)| -(~)| @(&)| !(#)|      |  1  |  2  |  3  | =(+)| RSE | N/A |
+            // | N/A | LWR | ⌫ | -(~)| @(&)| !(#)|      |  1  |  2  |  3  | =(+)| RSE | N/A |
             // | N/A | /(\)| <(>)| %(*)| :(;)| ?(^)|      |  4  |  5  |  6  |     |     | N/A |
             // | N/A |coppy| _(|)| {(})| [(])| (())|      |  7  |  8  |  9  |     |     | N/A |
-            //                   | ENT | .(') |SPACE |  |BK(DE)| 0(,) |  ⬆  |
+            //                    | CTRL | .(') | __ |  |  ⬆  | 0(,) |  ↵  |
 
             bindings = <
-&trans         &trans          &trans         &fancyl         &atmps         &exchsh                   &kp N1         &kp N2          &kp N3         &equlpls        &trans         &trans
-&trans         &slash          &croc          &money          &mt SEMI COLON &qusthat                  &kp N4         &kp N5          &kp N6         &prcntastk      &trans         &trans
-&trans         &trans          &lines         &mt RBRC LBRC   &mt RBKT LBKT  &mt RPAR LPAR             &kp N7         &kp N8          &kp N9         &trans          &trans         &trans
+&trans       &trans          &trans          &mt PIPE MINUS   &mt AMPS DQT   &mt BSLH EXCL             &kp N1         &kp N2          &kp N3         &equlpls        &trans         &trans
+&trans  &mt NON_US_BACKSLASH FSLH &mt GT LT  &mt DOLLAR POUND &mt SEMI COLON &mt CARET QMARK           &kp N4         &kp N5          &kp N6         &prcntastk      &trans         &trans
+&trans       &trans          &mt PIPE2 UNDER &mt RBRC LBRC    &mt RBKT LBKT  &mt RPAR LPAR             &kp N7         &kp N8          &kp N9         &trans          &trans         &trans
                                                   &trans         &trans          &trans          &trans         &mt COMMA N0    &trans
             >;   
         };
 
         raise_layer {
             // -----------------------------------------------------------------------------------------
-            // | N/A | LWR |     |  ⬆  |     |     |      |  V+ |  V- |  Vx |PSCN | RSE | N/A |
+            // | N/A | LWR | ⌫ |  ⬆  |     |     |      |  V+ |  V- |  Vx |PSCN | RSE | N/A |
             // | N/A |     |  ⬅ |  ⬇  |  ⮕ |     |      | sc⬇ | sc⬆ |     |  B+ |  B- | N/A |
             // | N/A |     |     |     |     |     |      |     |     |     |     | WIN | N/A |
-            //                   | ENT | .(') |SPACE |  |BK(DE)| ,(") |  ⬆  |
+            //                    | CTRL | .(') | __ |  |  ⬆  | ,(") |  ↵  |
 
             bindings = <
-&trans         &trans          &trans         &kp UP          &trans         &trans                    &kp C_BRI_UP     &kp C_BRI_DN     &msc SCRL_UP     &kp PSCRN        &trans           &trans
-&trans         &trans          &kp LEFT       &kp DOWN        &kp RIGHT      &trans                    &bt BT_CLR_ALL   &msc SCRL_LEFT   &msc SCRL_DOWN   &msc SCRL_RIGHT  &kp RWIN         &trans
-&trans         &trans          &trans         &trans          &trans         &trans                    &kp C_VOL_UP     &kp C_VOL_DN     &kp C_MUTE       &bt BT_SEL 1     &bt BT_SEL 2     &trans
+&trans         &trans          &trans         &kp UP          &trans         &trans                    &kp C_VOL_UP     &kp C_BRI_DN     &msc SCRL_UP     &kp PSCRN        &trans           &trans
+&trans         &trans          &kp LEFT       &kp DOWN        &kp RIGHT      &trans                    &kp C_VOL_DN     &msc SCRL_LEFT   &msc SCRL_DOWN   &msc SCRL_RIGHT  &kp RWIN         &trans
+&trans         &trans          &trans         &trans          &trans         &trans                    &kp C_MUTE       &kp C_VOL_DN     &kp C_MUTE       &bt BT_SEL 1     &bt BT_SEL 2     &trans
                                                   &trans         &trans          &trans          &trans         &trans          &trans 
             >;   
-        };
+        };&bt BT_CLR_ALL   C_BRI_UP &kp C_BRI_DN
     };
 };
