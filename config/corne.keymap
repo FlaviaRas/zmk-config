@@ -64,7 +64,7 @@ prcntastk: percent_asterisk {
 one: 1_F1 {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
-    bindings = <&kp KP_N1>, <&kp F1>;
+    bindings = <&kp KP_NUMBER_1>, <&kp F1>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
 };
 
