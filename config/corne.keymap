@@ -71,63 +71,63 @@ one: 1_F1 {
 two: 2_F2 {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
-    bindings = <&kp KP_N2>, <&kp F2>;
+    bindings = <&kp KP_NUMBER_2>, <&kp F2>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
 };
 
 three: 3_F3 {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
-    bindings = <&kp KP_N3>, <&kp F3>;
+    bindings = <&kp KP_NUMBER_3>, <&kp F3>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
 };
 
 four: 4_F4 {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
-    bindings = <&kp KP_N4>, <&kp F4>;
+    bindings = <&kp KP_NUMBER_4>, <&kp F4>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
 };
 
 five: 5_F5 {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
-    bindings = <&kp KP_N5>, <&kp F5>;
+    bindings = <&kp KP_NUMBER_5>, <&kp F5>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
 };
 
 six: 6_F6 {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
-    bindings = <&kp KP_N6>, <&kp F6>;
+    bindings = <&kp KP_NUMBER_6>, <&kp F6>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
 };
 
 seven: 7_F7 {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
-    bindings = <&kp KP_N7>, <&kp F7>;
+    bindings = <&kp KP_NUMBER_7>, <&kp F7>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
 };
 
 eight: 8_F8 {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
-    bindings = <&kp KP_N8>, <&kp F8>;
+    bindings = <&kp KP_NUMBER_8>, <&kp F8>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
 };
 
 nine: 9_F9 {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
-    bindings = <&kp KP_N9>, <&kp F9>;
+    bindings = <&kp KP_NUMBER_9>, <&kp F9>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
 };
 
 zero: 0_F10 {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
-    bindings = <&mt COMMA KP_N0>, <&kp F10>;
+    bindings = <&mt COMMA KP_NUMBER_0>, <&kp F10>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
 };
 mutes: voldwn_mute {
