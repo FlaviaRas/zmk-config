@@ -64,70 +64,70 @@ prcntastk: percent_asterisk {
 one: 1_F1 {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
-    bindings = <&kp KP_NUMBER_1>, <&kp F1>;
+    bindings = <&kp N1>, <&kp F1>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
 };
 
 two: 2_F2 {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
-    bindings = <&kp KP_NUMBER_2>, <&kp F2>;
+    bindings = <&kp N2>, <&kp F2>;
     mods = <(MOD_LCTL)>;
 };
 
 three: 3_F3 {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
-    bindings = <&kp KP_NUMBER_3>, <&kp F3>;
+    bindings = <&kp N3>, <&kp F3>;
     mods = <(MOD_LCTL)>;
 };
 
 four: 4_F4 {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
-    bindings = <&kp KP_NUMBER_4>, <&kp F4>;
+    bindings = <&kp N4>, <&kp F4>;
     mods = <(MOD_LCTL)>;
 };
 
 five: 5_F5 {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
-    bindings = <&kp KP_NUMBER_5>, <&kp F5>;
+    bindings = <&kp N5>, <&kp F5>;
     mods = <(MOD_LCTL)>;
 };
 
 six: 6_F6 {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
-    bindings = <&kp KP_NUMBER_6>, <&kp F6>;
+    bindings = <&kp N6>, <&kp F6>;
     mods = <(MOD_LCTL)>;
 };
 
 seven: 7_F7 {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
-    bindings = <&kp KP_NUMBER_7>, <&kp F7>;
+    bindings = <&kp N7>, <&kp F7>;
     mods = <(MOD_LCTL)>;
 };
 
 eight: 8_F8 {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
-    bindings = <&kp KP_NUMBER_8>, <&kp F8>;
+    bindings = <&kp N8>, <&kp F8>;
     mods = <(MOD_LCTL)>;
 };
 
 nine: 9_F9 {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
-    bindings = <&kp KP_NUMBER_9>, <&kp F9>;
+    bindings = <&kp N9>, <&kp F9>;
     mods = <(MOD_LCTL)>;
 };
 
 zero: 0_F10 {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
-    bindings = <&mt COMMA KP_NUMBER_0>, <&kp F10>;
+    bindings = <&mt COMMA N0>, <&kp F10>;
     mods = <(MOD_LCTL)>;
 };
 mutes: voldwn_mute {
