@@ -130,19 +130,25 @@ zero: 0_F10 {
     bindings = <&mt COMMA KP_N0>, <&kp F10>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
 };
+mutes: voldwn_mute {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp C_VOL_DN>, <&kp C_MUTE>;
+            mods = <(MOD_LCTL)>;
+        };  
 
-vols: mod_morph_volup_voldwn_mute {
-    compatible = "zmk,behavior-mod-morph";
-    #binding-cells = <0>;
-    bindings = <&kp C_VOL_UP>, <&kp C_VOL_DN>, <&kp C_MUTE>;
-    mods = <(MOD_LSFT|MOD_RSFT)>, <(MOD_LCTL|MOD_RCTL)>;
+vols: volup_voldwn_mute {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp C_VOL_UP>, <&mutes>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
 };
 
-btmorph: mod_morph_bt1_bt2_btclr {
-    compatible = "zmk,behavior-mod-morph";
+btmorph: tap_dance_bt1_bt2_btclr {
+    compatible = "zmk,behavior-tap-dance";
     #binding-cells = <0>;
+    tapping-term-ms = <200>;
     bindings = <&bt BT_SEL 1>, <&bt BT_SEL 2>, <&bt BT_CLR_ALL>;
-    mods = <(MOD_LSFT|MOD_RSFT)>, <(MOD_LCTL|MOD_RCTL)>;
 };
 
 bri: brightup_brightdwn {
