@@ -157,21 +157,6 @@ bri: brightup_brightdwn {
     bindings = <&kp C_BRI_DN>, <&kp C_BRI_UP>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
 };
-
-num_word: num_word {
-    #binding-cells = <0>;
-    compatible = "zmk,behavior-num-word";
-    continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL LPAR RPAR>;
-    ignore-numbers;
-};
-
-nummies: new_num_word {
-    #binding-cells = <0>;
-    compatible = "zmk,behavior-num-word";
-    layers = <(1)>;
-    continue-list = <BSPC EQUAL>;
-    ignore-numbers;
-};
 };
 
     keymap {
@@ -216,7 +201,7 @@ nummies: new_num_word {
 
             bindings = <
 &trans         &trans          &trans         &kp UP          &trans         &trans                    &vols          &bri            &msc SCRL_UP     &kp PSCRN        &trans           &trans
-&trans         &trans          &kp LEFT       &kp DOWN        &kp RIGHT      &trans                    &trans         &msc SCRL_LEFT  &msc SCRL_DOWN   &msc SCRL_RIGHT  &kp RWIN         &trans
+&trans         &trans          &kp LEFT       &kp DOWN        &kp RIGHT      &trans                    &mutes         &msc SCRL_LEFT  &msc SCRL_DOWN   &msc SCRL_RIGHT  &kp RWIN         &trans
 &trans         &trans          &trans         &trans          &trans         &trans                    &bt BT_SEL 1   &bt BT_SEL 2    &bt BT_CLR_ALL   &trans           &trans           &trans
                                                   &trans         &trans          &trans          &trans         &trans          &trans 
             >;   
