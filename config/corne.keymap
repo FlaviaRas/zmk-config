@@ -217,7 +217,7 @@ nummies: new_num_word {
             bindings = <
 &trans         &trans          &trans         &kp UP          &trans         &trans                    &vols          &bri            &msc SCRL_UP     &kp PSCRN        &trans           &trans
 &trans         &trans          &kp LEFT       &kp DOWN        &kp RIGHT      &trans                    &trans         &msc SCRL_LEFT  &msc SCRL_DOWN   &msc SCRL_RIGHT  &kp RWIN         &trans
-&trans         &trans          &trans         &trans          &trans         &trans                    &btmorph       &trans          &trans           &trans           &trans           &trans
+&trans         &trans          &trans         &trans          &trans         &trans                    &bt BT_SEL 1   &bt BT_SEL 2    &bt BT_CLR_ALL   &trans           &trans           &trans
                                                   &trans         &trans          &trans          &trans         &trans          &trans 
             >;   
         };
